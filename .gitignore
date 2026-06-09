@@ -1,0 +1,65 @@
+# ── Sekrety i env ────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+# te dwa są celowo w repo (szablony — bez sekretów)
+!.env.example
+!.env.sandbox
+!.env.prod
+
+# ── Wagi modelu (~70 GB — pobieraj przez: make download-model) ───────────────
+models/
+
+# ── Dane lokalnych wolumenów Dockera ─────────────────────────────────────────
+data/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+*.so
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# ── Docker — lokalne overrides (nie commituj) ─────────────────────────────────
+docker-compose.override.yml
+
+# ── Claude Code (lokalne konfiguracje z hardcoded ścieżkami) ─────────────────
+.claude/
+frontend/.claude/
+
+# ── IDE i system operacyjny ───────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logi ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Alembic wygenerowane wersje (opcjonalnie zostaw jeśli wersjonujesz migracje)
+# backend/alembic/versions/*.py
+
+# ── Pliki przesłanych dokumentów ─────────────────────────────────────────────
+data/documents/
